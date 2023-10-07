@@ -114,7 +114,7 @@ nav a.active {
   grid-gap: 10rem;
 }
 h3 {
-  padding: 10px;
+  padding-bottom: 5px;
   color: #111;
 }
 
@@ -134,16 +134,29 @@ td:hover {
   background-color: #fff;
   color: #111;
 }
-.container {
-  margin: 50px;
-}
 .one_project {
-  display: flex;
-  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10rem;
+  margin: 40px 0;
 }
 .one_project #screenshot {
   width: 500px;
   border-radius: 20px;
+}
+.project_desc p{
+  font-size: 1.1rem;
+}
+.project_desc .discover_btn{
+  height: 40px;
+  width: 170px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: palevioletred;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 .contact {
   position: relative;
@@ -216,6 +229,7 @@ form textarea {
 footer {
   position: relative;
   height: 300px;
+  padding: 50px;
   background-color: #111;
   color: #fff;
   text-align: center;
@@ -224,10 +238,12 @@ footer {
   position: absolute;
   bottom: 0;
   padding: 20px 0;
-  width: 100%;
   font-size: 1rem;
   text-align: center;
 }
 .footer_bottom #white_heart_icon {
   width: 1%;
+}
+.footer_top .social img{
+  width: 40px;
 }
