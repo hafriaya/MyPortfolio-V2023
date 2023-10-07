@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aya HAFRI</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="myprofile">
+        <div class="profile_pic">
+          <img src="./images/Meeeee.png" alt="profile_pic" />
+        </div>
+        <div class="name"><a href="#">Aya Hafri</a></div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="home" id="home" data-nav="home">
+      <div class="intro">
+        <h1 class="hey">Hey! I'm AYA HAFRI</h1>
+        <p>
+          Full stack web developer with a passion for creating seamless and
+          user-friendly digital experiences, from front-end design to back-end
+          functionality.
+        </p>
+      </div>
+    </section>
+    <section class="about" id="about" data-nav="about">
+      <div class="title">
+        <h2>About Me</h2>
+        <p>
+          Here, you can delve into my profile, explore my projects, and gain
+          insight into my programming and tech skills.
+        </p>
+      </div>
+      <div class="side_by_side">
+        <div class="discover">
+          <h3>Discover Me!</h3>
+          <p>
+            I'm a passionate <b>Full Stack Web Developer</b> with a knack for
+            turning ideas into functional and engaging digital experiences. My
+            journey began with a fascination for front-end design and evolved
+            into a love for crafting robust back-end solutions. My skill set
+            spans both realms, allowing me to create user-friendly interfaces
+            and power them with efficient, secure code.
+          </p>
+          <p>
+            What sets me apart is my commitment to continuous growth. I thrive
+            on staying up-to-date with the latest web technologies and
+            leveraging them to create innovative solutions. Collaboration is my
+            strong suit, and I relish the opportunity to work with diverse teams
+            to bring visions to life. Whether it's a sleek website or a complex
+            web application, I'm dedicated to delivering top-notch results that
+            make an impact.
+          </p>
+        </div>
+        <div class="skills">
+          <h3>My skills</h3>
+          <table>
+            <tr>
+              <td>html/css</td>
+              <td>javascript</td>
+              <td>react</td>
+            </tr>
+            <tr>
+              <td>python</td>
+              <td>php</td>
+              <td>laravel</td>
+            </tr>
+            <tr>
+              <td>MySql</td>
+              <td>git</td>
+              <td>github</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects" data-nav="projects">
+      <div class="title">
+        <h2>my projects</h2>
+        <p>
+          Explore my portfolio to discover a collection of personal and client
+          projects, each accompanied by its own in-depth case study.
+        </p>
+      </div>
+      <div class="container">
+        <div class="one_project">
+          <div class="image">
+            <img id="screenshot" src="./images/shoes.png" alt="shoes" />
+          </div>
+          <div>
+            <h3>Sberdilty</h3>
+          </div>
+        </div>
+        <br />
+        <div class="one_project">
+          <div class="image">
+            <img id="screenshot" src="./images/rent-car2.png" alt="rent-car2" />
+          </div>
+          <div>
+            <h3>KriCar v2</h3>
+          </div>
+        </div>
+        <br />
+        <div class="one_project">
+          <div class="image">
+            <img id="screenshot" src="./images/rent-car1.png" alt="rent-car1" />
+          </div>
+          <div>
+            <h3>KriCar v1</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact" data-nav="contact">
+      <div class="contact_form">
+        <div class="title">
+          <h2>Contact</h2>
+        </div>
+        <form action="#">
+          <div class="one_input">
+            <label for="name">Name</label>
+            <br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+            <br />
+          </div>
+          <div class="one_input">
+            <label for="email">Email</label>
+            <br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <br />
+          </div>
+          <div class="one_input">
+            <label for="message">Message</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              placeholder="Enter your message..."
+            ></textarea>
+            <br />
+          </div>
+          <div class="one_input btn">
+            <input type="submit" name="submit" id="submit_btn" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer_top">
+        <div class="social">
+          <a href="#"
+            ><img src="./images/instagram_icon.svg" alt="instagram_icon"
+          /></a>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <span>
+          Copyright © 2023 with
+          <img
+            id="white_heart_icon"
+            src="./images/white_heart_icon.png"
+            alt="white_heart_icon"
+          />
+          by AYA HAFRI
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      function updateActiveNavItem() {
+        const sections = document.querySelectorAll("section[data-nav]");
+        sections.forEach((section) => {
+          const navItem = document.querySelector(
+            `nav a[href="#${section.id}"]`
+          );
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            navItem.classList.add("active");
+          } else {
+            navItem.classList.remove("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNavItem);
+      window.addEventListener("load", updateActiveNavItem);
+    </script>
+  </body>
+</html>
