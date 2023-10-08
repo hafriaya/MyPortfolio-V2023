@@ -129,25 +129,49 @@ td:hover {
   background-color: palevioletred;
   color: #fff;
 }
+
 .projects {
   padding: 100px 250px;
   background-color: #fff;
   color: #111;
 }
+
 .one_project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 40px 0;
 }
+
+.one_project:nth-of-type(odd){
+  flex-direction: row-reverse;
+}
+
+.one_project .image {
+  flex: 1;
+}
+
+.one_project .project_desc {
+  flex: 1;
+  margin: 10px 60px;
+}
+
+.one_project img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Additional styling can be added here for buttons, headings, etc. */
+
+
 .one_project #screenshot {
   width: 500px;
   border-radius: 20px;
 }
-.project_desc p{
+.project_desc p {
   font-size: 1.1rem;
 }
-.project_desc .discover_btn{
+.project_desc .discover_btn {
   height: 40px;
   width: 170px;
   margin: 10px 0;
@@ -220,6 +244,7 @@ form textarea {
   background-color: palevioletred;
   color: #fff;
   border-radius: 15px;
+  border: none;
   height: 70px;
   width: 60%;
   font-size: 1.2rem;
@@ -234,13 +259,16 @@ footer {
   color: #fff;
   text-align: center;
 }
-
-.social{
+.footer_top {
+  margin: 30px 0;
+}
+.social {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 50px 0;
 }
-.social a{
+.social a {
   margin: 0 5px;
   height: 30px;
 }
@@ -254,11 +282,65 @@ footer {
 }
 .footer_bottom #white_heart_icon {
   width: 1%;
-<<<<<<< HEAD
 }
-=======
+
+@media (max-width: 801px) {
+  .home .intro {
+    margin: 20px;
+    font-size: 1.8rem;
+    color: #555;
+  }
+  .home .intro .hey {
+    color: #111;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  .title {
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  .about {
+    padding: 20px;
+  }
+  .about .side_by_side {
+    display: block;
+    margin: 10px;
+  }
+  .about .discover {
+    padding: 10px 0;
+  }
+  .about table td {
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  .projects {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .one_project {
+    display: block;
+  }
+  .one_project #screenshot {
+    width: 300px;
+  }
+  .projects .project_desc{
+    padding: 20px 0;
+  }
+  .contact_form {
+    padding: 30px 55px;
+  }
+  form input , form textarea{
+    padding: 5px 0 5px 20px;
+  }
+  form #submit_btn{
+    width: 100%;
+  }
+  .footer_bottom{
+    position: static;
+    padding: 5px 0;
+  }
+  .footer_bottom #white_heart_icon {
+    width: 6%;
+  }
 }
-.footer_top .social img{
-  width: 40px;
-}
->>>>>>> origin/master
