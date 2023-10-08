@@ -254,4 +254,11 @@ footer {
 }
 .footer_bottom #white_heart_icon {
   width: 1%;
+<<<<<<< HEAD
 }
+=======
+}
+.footer_top .social img{
+  width: 40px;
+}
+>>>>>>> origin/master
