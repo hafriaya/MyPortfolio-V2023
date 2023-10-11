@@ -43,10 +43,19 @@ header .profile_pic img {
   width: 100%;
   border-radius: 50%;
 }
-header nav {
+header .navbar {
   display: flex;
+  justify-content: space-between;
   margin-right: 50px;
   align-items: center;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav li {
+  list-style: none;
 }
 header nav a {
   padding: 0 40px;
@@ -60,6 +69,19 @@ nav a.active {
 
 nav a.active {
   color: palevioletred;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
 
 .home {
@@ -135,14 +157,31 @@ td:hover {
   color: #111;
 }
 .one_project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
-  margin: 40px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px 0;
 }
+.one_project:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+
+.one_project .image {
+  flex: 1;
+}
+
+.one_project .project_desc {
+  flex: 1;
+  margin: 10px 60px;
+}
+
+/* Additional styling can be added here for buttons, headings, etc. */
+
 .one_project #screenshot {
   width: 500px;
   border-radius: 20px;
+  max-width: 100%;
+  height: auto;
 }
 .project_desc p{
   font-size: 1.1rem;
@@ -234,6 +273,19 @@ footer {
   color: #fff;
   text-align: center;
 }
+.footer_top {
+  margin: 30px 0;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+.social a {
+  margin: 0 5px;
+  height: 30px;
+}
 .footer_bottom {
   position: absolute;
   bottom: 0;
@@ -244,6 +296,97 @@ footer {
 .footer_bottom #white_heart_icon {
   width: 1%;
 }
-.footer_top .social img{
-  width: 40px;
+@media (max-width: 801px) {
+  .nav-menu {
+    position: fixed;
+    left: -200%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .home .intro {
+    margin: 20px;
+    font-size: 1.8rem;
+    color: #555;
+  }
+  .home .intro .hey {
+    color: #111;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  .title {
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  .about {
+    padding: 20px;
+  }
+  .about .side_by_side {
+    display: block;
+    margin: 10px;
+  }
+  .about .discover {
+    padding: 10px 0;
+  }
+  .about table td {
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  .projects {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .one_project {
+    display: block;
+  }
+  .one_project .screenshot {
+    width: 300px;
+  }
+  .projects .project_desc {
+    padding: 20px 0;
+  }
+  .contact_form {
+    padding: 30px 55px;
+  }
+  form input,
+  form textarea {
+    padding: 5px 0 5px 20px;
+  }
+  form #submit_btn {
+    width: 100%;
+  }
+  .footer_bottom {
+    position: static;
+    padding: 5px 0;
+  }
+  .footer_bottom #white_heart_icon {
+    width: 6%;
+  }
 }
