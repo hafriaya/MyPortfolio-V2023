@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aya HAFRI</title>
-    <link rel="icon" type="image/png" href="./images/Meeeee.png">
+    <link rel="icon" type="image/png" href="./images/Meeeee.png" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -15,11 +15,26 @@
         </div>
         <div class="name"><a href="#">Aya Hafri</a></div>
       </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <section class="home" id="home" data-nav="home">
@@ -113,7 +128,11 @@
         <br />
         <div class="one_project">
           <div class="image">
-            <img class="screenshot" src="./images/rent-car2.png" alt="rent-car2" />
+            <img
+              class="screenshot"
+              src="./images/rent-car2.png"
+              alt="rent-car2"
+            />
           </div>
           <div class="project_desc">
             <h3>KriCar v2</h3>
@@ -132,7 +151,11 @@
         <br />
         <div class="one_project">
           <div class="image">
-            <img class="screenshot" src="./images/rent-car1.png" alt="rent-car1" />
+            <img
+              class="screenshot"
+              src="./images/rent-car1.png"
+              alt="rent-car1"
+            />
           </div>
           <div class="project_desc">
             <h3>KriCar v1</h3>
@@ -154,7 +177,10 @@
         <div class="title">
           <h2>Contact</h2>
         </div>
-        <form action="mailto:ms.hafriaya@gmail.com?&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!" method="get">
+        <form
+          action="mailto:ms.hafriaya@gmail.com?&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!"
+          method="get"
+        >
           <div class="one_input">
             <label for="name">Name</label>
             <br />
@@ -212,7 +238,7 @@
             id="github_icon"
             src="./images/github_icon.svg"
             alt="github_icon"
-            style="margin-bottom: -31px;margin-right: -8px;"
+            style="margin-bottom: -31px; margin-right: -8px"
           />
         </a>
         <a href="https://www.instagram.com/aya_hafri_/"
@@ -254,9 +280,28 @@
           }
         });
       }
-
       window.addEventListener("scroll", updateActiveNavItem);
       window.addEventListener("load", updateActiveNavItem);
+
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
     </script>
   </body>
 </html>

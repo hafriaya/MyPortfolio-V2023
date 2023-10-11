@@ -43,10 +43,19 @@ header .profile_pic img {
   width: 100%;
   border-radius: 50%;
 }
-header nav {
+header .navbar {
   display: flex;
+  justify-content: space-between;
   margin-right: 50px;
   align-items: center;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav li {
+  list-style: none;
 }
 header nav a {
   padding: 0 40px;
@@ -60,6 +69,19 @@ nav a.active {
 
 nav a.active {
   color: palevioletred;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
 
 .home {
@@ -143,7 +165,7 @@ td:hover {
   margin: 50px 0;
 }
 
-.one_project:nth-of-type(odd){
+.one_project:nth-of-type(odd) {
   flex-direction: row-reverse;
 }
 
@@ -156,9 +178,7 @@ td:hover {
   margin: 10px 60px;
 }
 
-
 /* Additional styling can be added here for buttons, headings, etc. */
-
 
 .one_project .screenshot {
   width: 500px;
@@ -283,6 +303,39 @@ footer {
 }
 
 @media (max-width: 801px) {
+  .nav-menu {
+    position: fixed;
+    left: -200%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
   .home .intro {
     margin: 20px;
     font-size: 1.8rem;
@@ -322,19 +375,20 @@ footer {
   .one_project .screenshot {
     width: 300px;
   }
-  .projects .project_desc{
+  .projects .project_desc {
     padding: 20px 0;
   }
   .contact_form {
     padding: 30px 55px;
   }
-  form input , form textarea{
+  form input,
+  form textarea {
     padding: 5px 0 5px 20px;
   }
-  form #submit_btn{
+  form #submit_btn {
     width: 100%;
   }
-  .footer_bottom{
+  .footer_bottom {
     position: static;
     padding: 5px 0;
   }
