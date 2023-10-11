@@ -177,7 +177,7 @@ td:hover {
 
 /* Additional styling can be added here for buttons, headings, etc. */
 
-.one_project #screenshot {
+.one_project .screenshot {
   width: 500px;
   border-radius: 20px;
   max-width: 100%;
