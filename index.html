@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aya HAFRI</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="./images/Meeeee.png" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -14,11 +16,26 @@
         </div>
         <div class="name"><a href="#">Aya Hafri</a></div>
       </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <section class="home" id="home" data-nav="home">
@@ -93,7 +110,7 @@
       <div class="container">
         <div class="one_project">
           <div class="image">
-            <img id="screenshot" src="./images/shoes.png" alt="shoes" />
+            <img class="screenshot" src="./images/shoes.png" alt="shoes" />
           </div>
           <div class="project_desc">
             <h3>Sberdilty</h3>
@@ -105,11 +122,19 @@
               for shoe enthusiasts."
             </p>
             <a href="https://github.com/hafriaya/Shoes-Project.git">
-            <button class="discover_btn">Discover ➜</button></a>
+              <button class="discover_btn">Discover ➜</button></a
+            >
           </div>
         </div>
         <br />
         <div class="one_project">
+          <div class="image">
+            <img
+              class="screenshot"
+              src="./images/rent-car2.png"
+              alt="rent-car2"
+            />
+          </div>
           <div class="project_desc">
             <h3>KriCar v2</h3>
             <p>
@@ -120,16 +145,18 @@
               car rental experience."
             </p>
             <a href="https://github.com/hafriaya/mini-projet-Rent_car-v2.git">
-            <button class="discover_btn">Discover ➜</button></a>
-          </div>
-          <div class="image">
-            <img id="screenshot" src="./images/rent-car2.png" alt="rent-car2" />
+              <button class="discover_btn">Discover ➜</button>
+            </a>
           </div>
         </div>
         <br />
         <div class="one_project">
           <div class="image">
-            <img id="screenshot" src="./images/rent-car1.png" alt="rent-car1" />
+            <img
+              class="screenshot"
+              src="./images/rent-car1.png"
+              alt="rent-car1"
+            />
           </div>
           <div class="project_desc">
             <h3>KriCar v1</h3>
@@ -140,7 +167,8 @@
               where simplicity meets functionality."
             </p>
             <a href="https://github.com/hafriaya/mini-projet-html-css-s1.git">
-            <button class="discover_btn">Discover ➜</button></a>
+              <button class="discover_btn">Discover ➜</button></a
+            >
           </div>
         </div>
       </div>
@@ -150,7 +178,10 @@
         <div class="title">
           <h2>Contact</h2>
         </div>
-        <form action="#">
+        <form
+          action="mailto:ms.hafriaya@gmail.com?&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!"
+          method="get"
+        >
           <div class="one_input">
             <label for="name">Name</label>
             <br />
@@ -187,38 +218,41 @@
             <br />
           </div>
           <div class="one_input btn">
-            <input type="submit" name="submit" id="submit_btn" />
+            <button type="submit" id="submit_btn">Send</button>
           </div>
         </form>
       </div>
     </section>
     <footer>
       <div class="footer_top">
-        <div class="social">
-          <a href="https://linkedin.com/in/hafriaya"
-            ><img
-              id="linkedin_icon"
-              src="./images/linkedin_icon.svg"
-              alt="linkedin_icon"
-          /></a>
-          <a href="https://github.com/hafriaya">
-            <img
-              id="github_icon"
-              src="./images/github_icon.svg"
-              alt="github_icon"
-            />
-          </a>
-          <a href="https://www.instagram.com/aya_hafri_/"
-            ><img
-              id="instagram_icon"
-              src="./images/instagram_icon.svg"
-              alt="instagram_icon"
-          /></a>
-          <a href="https://twitter.com/HafriAya">
-            <img id="x_icon" src="./images/x_icon.svg" alt="x_icon"
-          /></a>
-        </div>
+        <h1 class="hey">Hey! I'm AYA HAFRI</h1>
       </div>
+      <div class="social">
+        <a href="https://linkedin.com/in/hafriaya"
+          ><img
+            id="linkedin_icon"
+            src="./images/linkedin_icon.svg"
+            alt="linkedin_icon"
+        /></a>
+        <a href="https://github.com/hafriaya">
+          <img
+            id="github_icon"
+            src="./images/github_icon.svg"
+            alt="github_icon"
+            style="margin-bottom: -31px; margin-right: -8px"
+          />
+        </a>
+        <a href="https://www.instagram.com/aya_hafri_/"
+          ><img
+            id="instagram_icon"
+            src="./images/instagram_icon.svg"
+            alt="instagram_icon"
+        /></a>
+        <a href="https://twitter.com/HafriAya">
+          <img id="x_icon" src="./images/x_icon.svg" alt="x_icon"
+        /></a>
+      </div>
+
       <div class="footer_bottom">
         <span>
           Copyright © 2023 | Made with
@@ -231,25 +265,5 @@
         </span>
       </div>
     </footer>
-
-    <script>
-      function updateActiveNavItem() {
-        const sections = document.querySelectorAll("section[data-nav]");
-        sections.forEach((section) => {
-          const navItem = document.querySelector(
-            `nav a[href="#${section.id}"]`
-          );
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            navItem.classList.add("active");
-          } else {
-            navItem.classList.remove("active");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", updateActiveNavItem);
-      window.addEventListener("load", updateActiveNavItem);
-    </script>
   </body>
 </html>

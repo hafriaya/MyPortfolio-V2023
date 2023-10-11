@@ -72,7 +72,7 @@ nav a.active {
 }
 .home::before {
   content: "";
-  background-image: url(./images/islamic_mosaic-1.png);
+  background-image: url(/images/islamic_mosaic-1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
