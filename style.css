@@ -259,6 +259,7 @@ form textarea {
   background-color: palevioletred;
   color: #fff;
   border-radius: 15px;
+  border: none;
   height: 70px;
   width: 60%;
   font-size: 1.2rem;
