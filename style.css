@@ -26,7 +26,7 @@ header {
 }
 header .myprofile {
   display: flex;
-  margin-left: 100px;
+  margin-left: 6%;
   align-items: center;
 }
 header .myprofile a {
@@ -183,10 +183,10 @@ td:hover {
   max-width: 100%;
   height: auto;
 }
-.project_desc p{
+.project_desc p {
   font-size: 1.1rem;
 }
-.project_desc .discover_btn{
+.project_desc .discover_btn {
   height: 40px;
   width: 170px;
   margin: 10px 0;
@@ -298,6 +298,12 @@ footer {
   width: 1%;
 }
 @media (max-width: 801px) {
+  header .myprofile a {
+    padding: 0 5px;
+  }
+  .myprofile .profile_pic {
+    padding: 0 5px;
+  }
   .nav-menu {
     position: fixed;
     left: -200%;
