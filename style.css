@@ -380,7 +380,8 @@ footer {
     padding: 20px 0;
   }
   .contact_form {
-    padding: 30px 55px;
+    width: 75%;
+    padding: 30px 10%;
   }
   form input,
   form textarea {
@@ -389,11 +390,14 @@ footer {
   form #submit_btn {
     width: 100%;
   }
+  footer{
+    text-align: center;
+  }
   .footer_bottom {
     position: static;
     padding: 5px 0;
   }
   .footer_bottom #white_heart_icon {
-    width: 6%;
+    width: 5%;
   }
 }
